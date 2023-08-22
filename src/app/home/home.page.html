@@ -9,6 +9,9 @@
 
 
 <ion-content [fullscreen]="true">
+<ion-card>
+  <ion-card-content>
+
   <form [formGroup]="userForm" (ngSubmit)="save()">
     <ion-grid>
       <ion-row>
@@ -30,8 +33,9 @@
     <ion-button expand="block" type="submit">CADASTRAR-SE</ion-button>
   </form>
 
-
   <ion-button expand="block" fill="outline" routerLink="/ad-chamado">ENTRAR</ion-button>
+</ion-card-content>
+</ion-card>
 </ion-content>
 
 

@@ -1,12 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>Dados Chamado</ion-title>
-
-    <ion-button slot="start" fill="outline" routerLink="/ad-chamado">VOLTAR
-    </ion-button>
-
-
   </ion-toolbar>
+
+    <ion-card-content>
+      <ion-button slot="start" fill="outline" routerLink="/ad-chamado">VOLTAR
+      </ion-button>
+    </ion-card-content>
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -16,6 +16,8 @@
     </ion-card-header>
   </ion-card>
 
+  <ion-card>
+    <ion-card-content>
   <form [formGroup]="chamadoForm" (ngSubmit)="save()">
     <ion-grid>
       <ion-row>
@@ -36,6 +38,8 @@
       </ion-grid>
     <ion-button expand="block" type="submit">Salvar</ion-button>
   </form>
+</ion-card-content>
+</ion-card>
 </ion-content>
 
   <ion-footer>
