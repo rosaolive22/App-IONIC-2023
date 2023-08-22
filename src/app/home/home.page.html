@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Bem Vindo ao aplicativo Trevo!
+    </ion-title>
+      <ion-card-subtitle></ion-card-subtitle>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="userForm" (ngSubmit)="save()">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+              <ion-input aria-label-for="E-mail" required type="text" formControlName="email" clearInput=""
+              autocomplete="email" id="E-mail" name="E-mail">E-mail</ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+              <ion-input aria-label-for=" Senha" required type="number" formControlName="senha" clearInput="" autocomplete="senha" id="senha" name="E-mail">Senha</ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-button expand="block" type="submit">CADASTRAR-SE</ion-button>
+  </form>
+
+
+  <ion-button expand="block" fill="outline" routerLink="/ad-chamado">ENTRAR</ion-button>
+</ion-content>
+
+
+

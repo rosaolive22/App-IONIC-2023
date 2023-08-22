@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Dados Chamado</ion-title>
+
+    <ion-button slot="start" fill="outline" routerLink="/ad-chamado">VOLTAR
+    </ion-button>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Foto do Problema</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <form [formGroup]="chamadoForm" (ngSubmit)="save()">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input ariel-label-for="Descricao" requred type="text" formControlName="descricao" clearInput="" autocomplete="descricao" id="descricao" name="Endereço">Descrição</ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input aria-label-for="Endereço" required type="text" formControlName="endereco" clearInput=""
+              autocomplete="endereco" id="Endereço" name="Endereço">Endereço</ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      </ion-grid>
+    <ion-button expand="block" type="submit">Salvar</ion-button>
+  </form>
+</ion-content>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-button expand="block" routerLink="/dados-chamado">Saiba mais</ion-button>
+    </ion-toolbar>
+  </ion-footer>
+
