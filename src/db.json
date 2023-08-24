@@ -1,0 +1,7 @@
+{
+  "posts": [
+    { "id": 1, "e-mail": "Luciano_Duarte@.com", "senha": 1234 },
+    { "id": 2, "e-mail": "Rosa_Márcia@.com", "senha": 1234 },
+    { "id": 3, "e-mail": "Emanuelle@.com", "senha": 1234 }
+  ]
+}

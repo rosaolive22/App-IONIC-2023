@@ -19,6 +19,14 @@ const routes: Routes = [
     path: 'dados-chamado',
     loadChildren: () => import('./dados-chamado/dados-chamado.module').then( m => m.DadosChamadoPageModule)
   },
+  {
+    path: 'service',
+    loadChildren: () => import('./service/service.module').then( m => m.ServicePageModule)
+  },
+  {
+    path: 'usuario',
+    loadChildren: () => import('./usuario/usuario.module').then( m => m.UsuarioPageModule)
+  },
 ];
 
 @NgModule({
