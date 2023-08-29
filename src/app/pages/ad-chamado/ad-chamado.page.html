@@ -3,8 +3,21 @@
     <ion-title></ion-title>
   </ion-toolbar>
   <ion-card-content>
-    <ion-button expand="block" routerLink="/dados-chamado">Adicionar Chamado</ion-button>
+    <ion-card-content>
+
+      <ion-button slot="end" >
+        <ion-button (click)="sairDoAplicativo()">
+          Sair
+        </ion-button>
+      </ion-button>
+
+
+      <ion-button expand="block" routerLink="/dados-chamado">Adicionar Chamado</ion-button>
+
+      </ion-card-content>
   </ion-card-content>
+
+
 </ion-header>
 
 <ion-content [fullscreen]="true">

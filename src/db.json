@@ -1,7 +1,24 @@
 {
-  "posts": [
-    { "id": 1, "e-mail": "Luciano_Duarte@.com", "senha": 1234 },
-    { "id": 2, "e-mail": "Rosa_Márcia@.com", "senha": 1234 },
-    { "id": 3, "e-mail": "Emanuelle@.com", "senha": 1234 }
+  "usuarios": [
+    {
+      "id": 1,
+      "tipo": "adm",
+      "e-mail": "Luciano_Duarte@exemplo.com",
+      "senha": "1234"
+    },
+    {
+      "id": 2,
+      "tipo": "adm",
+      "e-mail": "Rosa_Marcia@exemplo.com",
+      "senha": "1234"
+    },
+    {
+      "id": 3,
+      "tipo": "cliente",
+      "e-mail": "Emanuelle@exemplo.com",
+      "senha": "1234"
+    }
   ]
 }
+
+

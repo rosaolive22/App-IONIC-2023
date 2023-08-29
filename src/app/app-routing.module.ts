@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
     path: '',
@@ -12,12 +12,16 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
     path: 'ad-chamado',
-    loadChildren: () => import('./ad-chamado/ad-chamado.module').then( m => m.AdChamadoPageModule)
+    loadChildren: () => import('./pages/ad-chamado/ad-chamado.module').then( m => m.AdChamadoPageModule)
   },
   {
     path: 'dados-chamado',
-    loadChildren: () => import('./dados-chamado/dados-chamado.module').then( m => m.DadosChamadoPageModule)
+    loadChildren: () => import('./pages/dados-chamado/dados-chamado.module').then( m => m.DadosChamadoPageModule)
   },
   {
     path: 'service',
@@ -25,8 +29,12 @@ const routes: Routes = [
   },
   {
     path: 'usuario',
-    loadChildren: () => import('./usuario/usuario.module').then( m => m.UsuarioPageModule)
+    loadChildren: () => import('./pages/usuario/usuario.module').then( m => m.UsuarioPageModule)
   },
+  //Rota para sair do aplicativo
+  { path: 'sair-do-aplicativo', redirectTo: '/home', pathMatch: 'full'
+  },
+
 ];
 
 @NgModule({

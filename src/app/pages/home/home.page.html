@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <img src="/assets/img/trevo-branco.svg">Bem Vindo ao aplicativo Trevo!
+    </ion-title>
+      <ion-card-subtitle></ion-card-subtitle>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-card>
+  <ion-card-content>
+  <form [formGroup]="userForm" (ngSubmit)="save()">
+      <ion-row>
+        <ion-col>
+            <ion-item>
+              <ion-input aria-label-for="E-mail" required type="email" formControlName="email" clearInput=""
+              autocomplete="email" id="E-mail" name="E-mail">E-mail</ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+              <ion-input aria-label-for=" Senha" required type="passworrd" formControlName="senha" cleOnInput clearOnEdit="false" autocomplete="senha" id="senha" name="E-mail" >Senha</ion-input>
+          </ion-item>
+          <!-- <ion-item>
+            <ion-input aria-label-for=" Confirmação de senha" required type="passworrd" formControlName="senhaConfirmation" cleOnInput clearOnEdit="false" autocomplete="senha" id="senha" name="E-mail">Confirmação de senha</ion-input>
+        </ion-item> -->
+        </ion-col>
+      </ion-row>
+      <ion-button expand="block" type="submit">CADASTRAR USUÁRIO</ion-button>
+  </form>
+  <ion-button expand="block" fill="outline" routerLink="/ad-chamado">LOGIN</ion-button>
+</ion-card-content>
+</ion-card>
+</ion-content>
+
+
+

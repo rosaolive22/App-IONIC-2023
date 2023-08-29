@@ -18,9 +18,12 @@ export class DadosChamadoPage {
     })
    }
 
-  save(){
-    let{ descricao, endereco}= this.chamadoForm.value;
-    let addChamado = new ChamadoModel(1, descricao, endereco)
-    console.log('Enviado');
+    save(){
+      let{ descricao, endereco}= this.chamadoForm.value;
+      let addChamado = new ChamadoModel(1, descricao, endereco)
+      console.log('Chamado cadastrado com sucesso.');
+    }
+    exibirMensagemDeCadastro() {
+    window.alert('Cadastro realizado com sucesso!');
   }
 }

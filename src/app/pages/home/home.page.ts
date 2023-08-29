@@ -5,6 +5,7 @@ import { NavController } from '@ionic/angular';
 
 import { UsuarioModel } from 'src/models/usuario.model';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -14,11 +15,20 @@ export class HomePage {
   userForm: FormGroup;
   HttpClient: any;
 
+
   constructor(private form: FormBuilder, public navCtrl: NavController) {
     this.userForm = this.form.group({
-      senha: ['', Validators.required],
+      // senha: ['', Validators.required],
+      // email: ['', Validators.required]
+      senha: ['', Validators.compose([Validators.minLength(4), Validators.maxLength(4)])],
+      senhaConfirmation: ['', Validators.compose([Validators.minLength(4), Validators.maxLength(4)])],
       email: ['', Validators.required]
     })
+    // this.createData = this.form.group({
+    //   senha: ['', Validators.compose([Validators.minLength(4), Validators.maxLength(4)])],
+    //   senhaConfirmation: ['', Validators.compose([Validators.minLength(4), Validators.maxLength(4)])],
+    //   email: ['', Validators.required]
+    // })
   }
 
   save(){
@@ -38,5 +48,8 @@ export class HomePage {
       }
     );
   }
+  
+
+
 
 }
